@@ -7,23 +7,47 @@
 
 import UIKit
 
-class PictureCaptureViewController: UIViewController {
-
+class PictureCaptureViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+    
+    // MARK: - Outlets
+    
+    @IBOutlet weak var cameraButton: UIButton!
+    @IBOutlet weak var cameraRollButton: UIButton!
+    @IBOutlet weak var capturedImage: UIImageView!
+    
+    @IBOutlet weak var cameraRollPreview: UIImageView!
+    @IBOutlet weak var cancelButton: UIButton!
+    
+    var imagePickerController = UIImagePickerController()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        imagePickerController.delegate = self
+//        checkPermissions()
+    }
+    
+    // MARK: - Actions
+    
+    @IBAction func cameraRollButtonTapped(_ sender: Any) {
+        self.imagePickerController.sourceType = .photoLibrary
+        self.present(self.imagePickerController, animated: true, completion: nil)
+    }
+    @IBAction func cameraButtonTapped(_ sender: Any) {
+        let picker = UIImagePickerController()
+        picker.sourceType = .camera
+        picker.allowsEditing = true
+        picker.delegate = self
+        present(picker, animated: true)
+        
     }
     
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        if picker.sourceType == .photoLibrary {
+           cameraRollPreview?.image = info[UIImagePickerController.InfoKey.originalImage] as? UIImage
+        } else {
+            capturedImage?.image = info[UIImagePickerController.InfoKey.editedImage] as? UIImage
+        }
+        picker.dismiss(animated: true, completion: nil)
     }
-    */
-
 }

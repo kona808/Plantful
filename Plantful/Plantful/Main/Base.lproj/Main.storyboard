@@ -23,10 +23,10 @@
             </objects>
             <point key="canvasLocation" x="-652" y="-218"/>
         </scene>
-        <!--Item-->
+        <!--PictureCaptureNav-->
         <scene sceneID="xNc-gn-HOW">
             <objects>
-                <navigationController id="j4b-TC-xzP" sceneMemberID="viewController">
+                <navigationController title="PictureCaptureNav" id="j4b-TC-xzP" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Item" id="1jH-tE-jo3"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="eiQ-Ck-ibs">
                         <rect key="frame" x="0.0" y="47" width="390" height="44"/>
@@ -61,7 +61,7 @@
         <scene sceneID="OCI-Nw-tpM">
             <objects>
                 <tabBarController id="ZKf-5O-EH0" sceneMemberID="viewController">
-                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="3Rk-cH-1DT">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" backgroundImage="heart.rectangle.fill" catalog="system" id="3Rk-cH-1DT">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -107,4 +107,7 @@
             <point key="canvasLocation" x="191" y="467"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="heart.rectangle.fill" catalog="system" width="128" height="93"/>
+    </resources>
 </document>

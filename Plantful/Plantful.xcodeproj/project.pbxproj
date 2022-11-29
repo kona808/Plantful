@@ -7,9 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FF20813D2935090D006BFBB5 /* Plant.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF20813C2935090C006BFBB5 /* Plant.swift */; };
+		FF20814029351A77006BFBB5 /* Media.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF20813F29351A77006BFBB5 /* Media.swift */; };
+		FF20814229355E29006BFBB5 /* PictureCaptureViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF20814129355E29006BFBB5 /* PictureCaptureViewModel.swift */; };
+		FF20814429368B6C006BFBB5 /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF20814329368B6C006BFBB5 /* APIService.swift */; };
 		FF64582B2926F37300827AFC /* FavoriteTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF64582A2926F37300827AFC /* FavoriteTableViewCell.swift */; };
 		FF64582F2926F3CF00827AFC /* PictureCaptureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF64582E2926F3CF00827AFC /* PictureCaptureViewController.swift */; };
 		FF6458322926F3ED00827AFC /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF6458312926F3ED00827AFC /* HomeViewController.swift */; };
+		FF6458352926F9D600827AFC /* HomeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF6458342926F9D600827AFC /* HomeTableViewCell.swift */; };
 		FFC0A474292405CF0061E637 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFC0A473292405CF0061E637 /* AppDelegate.swift */; };
 		FFC0A476292405CF0061E637 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFC0A475292405CF0061E637 /* SceneDelegate.swift */; };
 		FFC0A478292405CF0061E637 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFC0A477292405CF0061E637 /* ViewController.swift */; };
@@ -22,9 +27,14 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		FF20813C2935090C006BFBB5 /* Plant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Plant.swift; sourceTree = "<group>"; };
+		FF20813F29351A77006BFBB5 /* Media.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Media.swift; sourceTree = "<group>"; };
+		FF20814129355E29006BFBB5 /* PictureCaptureViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PictureCaptureViewModel.swift; sourceTree = "<group>"; };
+		FF20814329368B6C006BFBB5 /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
 		FF64582A2926F37300827AFC /* FavoriteTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteTableViewCell.swift; sourceTree = "<group>"; };
 		FF64582E2926F3CF00827AFC /* PictureCaptureViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PictureCaptureViewController.swift; sourceTree = "<group>"; };
 		FF6458312926F3ED00827AFC /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		FF6458342926F9D600827AFC /* HomeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewCell.swift; sourceTree = "<group>"; };
 		FFC0A470292405CF0061E637 /* Plantful.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Plantful.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FFC0A473292405CF0061E637 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FFC0A475292405CF0061E637 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -49,6 +59,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		FF20813E2935091E006BFBB5 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				FF20813C2935090C006BFBB5 /* Plant.swift */,
+				FF20813F29351A77006BFBB5 /* Media.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		FF20814529368B74006BFBB5 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				FF20814329368B6C006BFBB5 /* APIService.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
 		FF64582C2926F38800827AFC /* Favorites */ = {
 			isa = PBXGroup;
 			children = (
@@ -72,6 +99,7 @@
 			children = (
 				FFC0A4AD29245B210061E637 /* PictureCapture.storyboard */,
 				FF64582E2926F3CF00827AFC /* PictureCaptureViewController.swift */,
+				FF20814129355E29006BFBB5 /* PictureCaptureViewModel.swift */,
 			);
 			path = PictureCapture;
 			sourceTree = "<group>";
@@ -81,6 +109,7 @@
 			children = (
 				FFC0A4AB29245A950061E637 /* Home.storyboard */,
 				FF6458312926F3ED00827AFC /* HomeViewController.swift */,
+				FF6458342926F9D600827AFC /* HomeTableViewCell.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -105,10 +134,12 @@
 			isa = PBXGroup;
 			children = (
 				FFC0A487292405EE0061E637 /* Resources */,
+				FF20813E2935091E006BFBB5 /* Models */,
 				FF64582D2926F39A00827AFC /* Main */,
 				FF64582C2926F38800827AFC /* Favorites */,
 				FF6458302926F3D600827AFC /* PictureCapture */,
 				FF6458332926F3F300827AFC /* Home */,
+				FF20814529368B74006BFBB5 /* Network */,
 			);
 			path = Plantful;
 			sourceTree = "<group>";
@@ -203,8 +234,13 @@
 				FFC0A478292405CF0061E637 /* ViewController.swift in Sources */,
 				FF64582B2926F37300827AFC /* FavoriteTableViewCell.swift in Sources */,
 				FFC0A474292405CF0061E637 /* AppDelegate.swift in Sources */,
+				FF20814429368B6C006BFBB5 /* APIService.swift in Sources */,
 				FFC0A476292405CF0061E637 /* SceneDelegate.swift in Sources */,
+				FF20814029351A77006BFBB5 /* Media.swift in Sources */,
+				FF6458352926F9D600827AFC /* HomeTableViewCell.swift in Sources */,
 				FF6458322926F3ED00827AFC /* HomeViewController.swift in Sources */,
+				FF20814229355E29006BFBB5 /* PictureCaptureViewModel.swift in Sources */,
+				FF20813D2935090D006BFBB5 /* Plant.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -370,6 +406,9 @@
 				DEVELOPMENT_TEAM = D23NK3BZLQ;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Plantful/Resources/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "";
+				INFOPLIST_KEY_NSCameraUsageDescription = "Please allow access to camera.";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "Please allow access to photos.";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -398,6 +437,9 @@
 				DEVELOPMENT_TEAM = D23NK3BZLQ;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Plantful/Resources/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "";
+				INFOPLIST_KEY_NSCameraUsageDescription = "Please allow access to camera.";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "Please allow access to photos.";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
