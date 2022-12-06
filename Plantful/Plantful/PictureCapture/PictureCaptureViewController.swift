@@ -15,10 +15,13 @@ class PictureCaptureViewController: UIViewController, UIImagePickerControllerDel
     @IBOutlet weak var cameraRollButton: UIButton!
     @IBOutlet weak var capturedImage: UIImageView!
     
+    @IBOutlet weak var selectImageButton: UIButton!
     @IBOutlet weak var cameraRollPreview: UIImageView!
     @IBOutlet weak var cancelButton: UIButton!
     
     var imagePickerController = UIImagePickerController()
+    
+    var searchedImage: UIImage? = nil
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -40,14 +43,29 @@ class PictureCaptureViewController: UIViewController, UIImagePickerControllerDel
         present(picker, animated: true)
         
     }
+    @IBAction func cancelButtonTapped(_ sender: Any) {
+        func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
+            self.dismiss(animated: true, completion: nil)
+        }
+    }
+    @IBAction func selectImageButtonTapped(_ sender: Any) {
+        // When the user taps this button the image from the imageView will be sent to the API.
+        guard let unwrappedImage = searchedImage else { return } 
+        // When recieving data it will load the data in the detail view and navigate the user there.
+        APIService().uploadImageToServer(imageToUpload: unwrappedImage)
+    }
     
-
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         if picker.sourceType == .photoLibrary {
-           cameraRollPreview?.image = info[UIImagePickerController.InfoKey.originalImage] as? UIImage
+            let capturedImage = info[UIImagePickerController.InfoKey.originalImage] as? UIImage
+           cameraRollPreview?.image = capturedImage
+            searchedImage = capturedImage
         } else {
-            capturedImage?.image = info[UIImagePickerController.InfoKey.editedImage] as? UIImage
+            let selectedImage = info[UIImagePickerController.InfoKey.editedImage] as? UIImage
+            capturedImage?.image = selectedImage
+            searchedImage = selectedImage
         }
         picker.dismiss(animated: true, completion: nil)
     }
+    
 }

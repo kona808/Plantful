@@ -11,6 +11,10 @@
 		FF20814029351A77006BFBB5 /* Media.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF20813F29351A77006BFBB5 /* Media.swift */; };
 		FF20814229355E29006BFBB5 /* PictureCaptureViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF20814129355E29006BFBB5 /* PictureCaptureViewModel.swift */; };
 		FF20814429368B6C006BFBB5 /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF20814329368B6C006BFBB5 /* APIService.swift */; };
+		FF20814729380609006BFBB5 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF20814629380609006BFBB5 /* NetworkError.swift */; };
+		FF20814B2939335E006BFBB5 /* HomeTableViewCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF20814A2939335E006BFBB5 /* HomeTableViewCellViewModel.swift */; };
+		FF20814F29393A69006BFBB5 /* PlantDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF20814E29393A69006BFBB5 /* PlantDetailViewModel.swift */; };
+		FF20815129393BCC006BFBB5 /* PlantImageCollectionViewTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF20815029393BCC006BFBB5 /* PlantImageCollectionViewTableViewCell.swift */; };
 		FF64582B2926F37300827AFC /* FavoriteTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF64582A2926F37300827AFC /* FavoriteTableViewCell.swift */; };
 		FF64582F2926F3CF00827AFC /* PictureCaptureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF64582E2926F3CF00827AFC /* PictureCaptureViewController.swift */; };
 		FF6458322926F3ED00827AFC /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF6458312926F3ED00827AFC /* HomeViewController.swift */; };
@@ -31,6 +35,10 @@
 		FF20813F29351A77006BFBB5 /* Media.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Media.swift; sourceTree = "<group>"; };
 		FF20814129355E29006BFBB5 /* PictureCaptureViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PictureCaptureViewModel.swift; sourceTree = "<group>"; };
 		FF20814329368B6C006BFBB5 /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
+		FF20814629380609006BFBB5 /* NetworkError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
+		FF20814A2939335E006BFBB5 /* HomeTableViewCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewCellViewModel.swift; sourceTree = "<group>"; };
+		FF20814E29393A69006BFBB5 /* PlantDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlantDetailViewModel.swift; sourceTree = "<group>"; };
+		FF20815029393BCC006BFBB5 /* PlantImageCollectionViewTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlantImageCollectionViewTableViewCell.swift; sourceTree = "<group>"; };
 		FF64582A2926F37300827AFC /* FavoriteTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteTableViewCell.swift; sourceTree = "<group>"; };
 		FF64582E2926F3CF00827AFC /* PictureCaptureViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PictureCaptureViewController.swift; sourceTree = "<group>"; };
 		FF6458312926F3ED00827AFC /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
@@ -72,8 +80,20 @@
 			isa = PBXGroup;
 			children = (
 				FF20814329368B6C006BFBB5 /* APIService.swift */,
+				FF20814629380609006BFBB5 /* NetworkError.swift */,
 			);
 			path = Network;
+			sourceTree = "<group>";
+		};
+		FF2081492938094C006BFBB5 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				FF6458332926F3F300827AFC /* Home */,
+				FF6458302926F3D600827AFC /* PictureCapture */,
+				FF64582C2926F38800827AFC /* Favorites */,
+				FF64582D2926F39A00827AFC /* Main */,
+			);
+			name = UI;
 			sourceTree = "<group>";
 		};
 		FF64582C2926F38800827AFC /* Favorites */ = {
@@ -110,6 +130,9 @@
 				FFC0A4AB29245A950061E637 /* Home.storyboard */,
 				FF6458312926F3ED00827AFC /* HomeViewController.swift */,
 				FF6458342926F9D600827AFC /* HomeTableViewCell.swift */,
+				FF20814A2939335E006BFBB5 /* HomeTableViewCellViewModel.swift */,
+				FF20814E29393A69006BFBB5 /* PlantDetailViewModel.swift */,
+				FF20815029393BCC006BFBB5 /* PlantImageCollectionViewTableViewCell.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -135,10 +158,7 @@
 			children = (
 				FFC0A487292405EE0061E637 /* Resources */,
 				FF20813E2935091E006BFBB5 /* Models */,
-				FF64582D2926F39A00827AFC /* Main */,
-				FF64582C2926F38800827AFC /* Favorites */,
-				FF6458302926F3D600827AFC /* PictureCapture */,
-				FF6458332926F3F300827AFC /* Home */,
+				FF2081492938094C006BFBB5 /* UI */,
 				FF20814529368B74006BFBB5 /* Network */,
 			);
 			path = Plantful;
@@ -231,6 +251,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				FF64582F2926F3CF00827AFC /* PictureCaptureViewController.swift in Sources */,
+				FF20814F29393A69006BFBB5 /* PlantDetailViewModel.swift in Sources */,
+				FF20815129393BCC006BFBB5 /* PlantImageCollectionViewTableViewCell.swift in Sources */,
 				FFC0A478292405CF0061E637 /* ViewController.swift in Sources */,
 				FF64582B2926F37300827AFC /* FavoriteTableViewCell.swift in Sources */,
 				FFC0A474292405CF0061E637 /* AppDelegate.swift in Sources */,
@@ -239,8 +261,10 @@
 				FF20814029351A77006BFBB5 /* Media.swift in Sources */,
 				FF6458352926F9D600827AFC /* HomeTableViewCell.swift in Sources */,
 				FF6458322926F3ED00827AFC /* HomeViewController.swift in Sources */,
+				FF20814729380609006BFBB5 /* NetworkError.swift in Sources */,
 				FF20814229355E29006BFBB5 /* PictureCaptureViewModel.swift in Sources */,
 				FF20813D2935090D006BFBB5 /* Plant.swift in Sources */,
+				FF20814B2939335E006BFBB5 /* HomeTableViewCellViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
